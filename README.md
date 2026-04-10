@@ -1,3 +1,33 @@
+# Workshop: Spring Boot API Demo - Progra III
+
+## 👤 Datos del Estudiante
+
+* **Nombre:** Edwins Josué Argueta Duarte
+* **Carné:** 0905-24-6913
+* **Carrera:** Ingeniería en Sistemas de Información
+* **Universidad:** Universidad Mariano Gálvez de Guatemala (UMG)
+
+## 🚀 Estado del Proyecto
+
+* **Build:** SUCCESS ✅
+* **Tests:** Passing ✅ *(Pruebas unitarias ejecutadas sin errores)*
+* **Java Version:** 17 (OpenJDK)
+* **Framework:** Spring Boot 3.3.5
+
+## 🛠️ Tecnologías Utilizadas
+
+* **Maven:** Para la gestión de dependencias y la construcción del proyecto (`pom.xml`).
+* **Jakarta Validation:** Para la validación estricta de datos de entrada (`@NotNull`, `@Positive`, etc.).
+* **SpringDoc / OpenAPI (Swagger):** Para la generación automática de la interfaz web de documentación interactiva.
+* **JUnit 5 & MockMvc:** Para simular peticiones HTTP y ejecutar las pruebas unitarias de los controladores.
+
+## 📌 Funcionalidades Implementadas
+
+* **Endpoint de Salud (`GET /api/v1`):** Verificación del estado activo de la API.
+* **Sistema de Saludos (`GET/POST /api/v1/saludos`):** Recepción de parámetros y cuerpos JSON, incluyendo lógica de negocio para la normalización de texto (formato Capitalize y limpieza de espacios).
+* **Manejo Global de Excepciones (`@RestControllerAdvice`):** Captura de excepciones de validación (`MethodArgumentNotValidException`) y reglas de negocio (`IllegalArgumentException`) para devolver respuestas JSON estructuradas con códigos HTTP 400.
+* **Simulador de Préstamos (`POST /api/v1/simulaciones/prestamo`):** Endpoint desafiante que recibe un monto, tasa de interés anual y plazo en meses, para devolver el cálculo exacto matemático de una cuota fija mensual.
+
 # Workshop Spring Boot 3.x + JDK 17 (Maven)
 
 Este repositorio es un **tutorial paso a paso** para clase/laboratorio.
