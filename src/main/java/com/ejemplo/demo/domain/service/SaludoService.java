@@ -17,12 +17,19 @@ public class SaludoService {
     /*
     PASO 4 (EJERCICIO):
     - Modifica esta logica para personalizar el formato del nombre.
-    - Ideas:
-      1) Primera letra mayuscula y resto minuscula.
-      2) Rechazar nombres con numeros.
-      3) Agregar prefijo "Estudiante".
     */
     String normalizarNombre(String nombre) {
-        return nombre == null ? "Mundo" : nombre.trim();
+        // Si el nombre es nulo o está vacío, devolvemos "Mundo" por defecto
+        if (nombre == null || nombre.trim().isEmpty()) {
+            return "Mundo";
+        }
+
+        // 1. Quitamos espacios al inicio y al final
+        String nombreLimpio = nombre.trim();
+
+        // 2. Aplicamos formato: Primera Mayúscula y el resto minúsculas
+        // Ejemplo: "eDwInS" -> "Edwins"
+        return nombreLimpio.substring(0, 1).toUpperCase() + 
+               nombreLimpio.substring(1).toLowerCase();
     }
 }
